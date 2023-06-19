@@ -1,5 +1,5 @@
 #!/bin/bash
-#MAVPROXY, MAVROS & MAVLINK
+#MAVPROXY MAVROS
 
 # Muda para o diretório home do usuário
 cd ~/
@@ -21,3 +21,5 @@ echo -e "enable_uart=1\ninit_uart_clock=64000000" | sudo tee -a /boot/config.txt
 
 # Instalar pacotes necessários
 sudo apt install autoconf automake libtool -y
+
+
