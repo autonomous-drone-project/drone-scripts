@@ -1,12 +1,8 @@
 #!/bin/bash
 #ROS-NOETIC
 
-next_script=$(cat ~/drone-scripts/next_script.txt)
-if [ "$next_script" != "5" ]; then
-    echo "Script errado."
-    echo "erro" > ~/drone-scripts/next_script.txt
-    exit 0
-fi
+# Muda para o diretório home do usuário
+cd ~/
 
 # Adicionar repositório ROS
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
@@ -36,9 +32,6 @@ sudo apt install python3-rosdep -y
 sudo rosdep init
 rosdep update
 
-# Atualizar sistema
-sudo apt update && sudo apt upgrade -y
-
 # Instalação do pacote ROS mavros e mavros-extras
 sudo apt-get install ros-noetic-mavros ros-noetic-mavros-extras -y
 
@@ -50,6 +43,3 @@ chmod a+x install_geographiclib_datasets.sh
 
 # Executa o script para instalar os dados do GeographicLib
 sudo ./install_geographiclib_datasets.sh
-
-# Atualização do número do próximo script
-echo "6" > ~/drone-scripts/next_script.txt

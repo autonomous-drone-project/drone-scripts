@@ -1,12 +1,14 @@
 #!/bin/bash
-#PI-CONFIG
+#Keyboard and Location
 
-next_script=$(cat ~/drone-scripts/next_script.txt)
-if [ "$next_script" != "2" ]; then
-    echo "Script errado."
-    echo "erro" > ~/drone-scripts/next_script.txt
-    exit 0
-fi
+# Muda para o diretório home do usuário
+cd ~/
+
+# Adiciona o diretório ~/.local/bin ao PATH do usuário
+echo "PATH=\$PATH:~/.local/bin" >> ~/.profile
+
+# Recarrega o arquivo ~/.profile para atualizar o PATH atual
+source ~/.profile
 
 # Configuração do layout do teclado
 sudo sed -i 's/XKBLAYOUT=.*/XKBLAYOUT="br"/' /etc/default/keyboard
@@ -20,9 +22,3 @@ echo "enable_uart=1" | sudo tee -a /boot/config.txt
 
 # Habilitação da câmera
 echo "start_x=1" | sudo tee -a /boot/config.txt
-
-# Atualização do número do próximo script
-echo "3" > ~/drone-scripts/next_script.txt
-
-# Reinicialização do sistema
-sudo reboot

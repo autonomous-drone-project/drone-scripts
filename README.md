@@ -6,13 +6,9 @@ Scripts para configurar e preparar um sistema para um drone. Cada script realiza
 
 ## Instruções
 
-Clone no repositorio principal:
+Clone do repositorio principal:
 
-> git clone https://github.com/TalesLimaOliveira/drone-scripts
-
-ou na branch de testes:
-
-> git clone -b noreboot https://github.com/TalesLimaOliveira/drone-scripts
+> git clone https://github.com/autonomous-drone-project/drone-scripts
 
 <br>
 
@@ -21,48 +17,35 @@ ou na branch de testes:
 Após a clonagem do repositório, execute o seguinte comando para executar todos os scripts em sequência.
 A cada reboot, execute:
 
-> bash ~/drone-scripts/run-script.sh
-
-Também pode executar cada script individualmente conforme necessário.
+> bash ~/drone-scripts/script-*.sh
 
 <br>
 
 ## Scripts Disponíveis
 
-### Script 1: Criação de arquivo de swap
+### Script Swap: Criação de arquivo de swap
 
     Este script cria um arquivo de swap para aumentar a memória disponível no sistema.
 
-> bash 1-swap.sh
+### Script Key Local: Configura da Raspberry Pi
 
-### Script 2: Instalação de pacotes
+    Este script configura teclado e local(ABNT2 - SP BRAZIL), portas e gpio da raspberry pi
+
+### Script 1 e 2: Instalação de pacotes
 
     Este script atualiza o sistema e instala pacotes necessários para o drone.
-
-> bash 2-packages.sh
-
 
 ### Script 3: Instalação do ROS Noetic
 
     Este script adiciona o repositório ROS e instala o ROS Noetic no sistema.
 
-> bash 3-ros-noetic.sh
+### Script 4: Instalação do MAVROS e MAVLINK
 
-
-### Script 4: Instalação do MAVROS
-
-    Este script instala o MAVROS e suas dependências.
-
-> bash 4-mavros.sh
-
+    Este script instala o MAVROS/MAVLINK e suas dependências.
 
 ### Script 5: Configuração do ambiente Catkin
 
     Este script configura o ambiente de trabalho Catkin e instala dependências adicionais.
-
-> bash 5-catkin.sh
-
-Certifique-se de executar os scripts em ordem e siga as instruções adicionais fornecidas em cada script, quando aplicável.
 
 <br>
 

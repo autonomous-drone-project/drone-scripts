@@ -1,12 +1,8 @@
 #!/bin/bash
 #SWAP
 
-next_script=$(cat ~/drone-scripts/next_script.txt)
-if [ "$next_script" != "1" ]; then
-    echo "Script errado."
-    echo "erro" > ~/drone-scripts/next_script.txt
-    exit 0
-fi
+# Muda para o diretório home do usuário
+cd ~/
 
 # Criação do arquivo de swap e ajuste de permissões
 sudo fallocate -l 2G /swapfile
@@ -22,9 +18,3 @@ sudo sysctl vm.swappiness=10
 sudo bash -c 'echo "vm.swappiness=10" >> /etc/sysctl.conf'
 sudo sysctl vm.vfs_cache_pressure=50
 sudo bash -c 'echo "vm.vfs_cache_pressure=50" >> /etc/sysctl.conf'
-
-# Atualização do número do próximo script
-echo "2" > ~/drone-scripts/next_script.txt
-
-# Reinicialização do sistema
-sudo reboot
