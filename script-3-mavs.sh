@@ -22,4 +22,12 @@ echo -e "enable_uart=1\ninit_uart_clock=64000000" | sudo tee -a /boot/config.txt
 # Instalar pacotes necessários
 sudo apt install autoconf automake libtool -y
 
+# Caso MavLink der problema com o future:
 
+#sudo apt-get install python3-virtualenv
+
+#virtualenv --python=python2.7 mavlink_env
+
+#source mavlink_env/bin/activate
+
+#pip install future
