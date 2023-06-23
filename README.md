@@ -8,7 +8,7 @@ Scripts para configurar e preparar um sistema para um drone. Cada script realiza
 
 Clone do repositorio principal:
 
-> git clone https://github.com/autonomous-drone-project/drone-scripts
+> git clone https://github.com/autonomous-drone-project/drone-scripts.git
 
 <br>
 
