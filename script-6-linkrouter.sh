@@ -18,4 +18,3 @@ ninja -C build
 sudo ninja -C build install
 
 sudo DESTDIR=/tmp/root/dir ninja -C build install
-
