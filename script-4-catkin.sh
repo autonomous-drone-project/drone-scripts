@@ -15,8 +15,8 @@ cd ~/catkin_ws
 mkdir src
 cd src
 git clone https://github.com/ros/catkin.git
-catkin init
 wstool init src
+catkin init
 
 # Install MAVLink
 #    we use the Kinetic reference for all ROS distros as it's not distro-specific and up to date
@@ -32,8 +32,8 @@ rosinstall_generator --upstream mavros --deps --rosdistro noetic | tee -a /tmp/m
 rosinstall_generator mavlink --rosdistro noetic | tee -a /tmp/mavros.rosinstall
 
 # Mesclar o arquivo rosinstall no ambiente de trabalho do Catkin
-wstool merge -t src /tmp/mavros.rosinstall
-y
+wstool merge -t src /tmp/mavros.rosinstall -y
+
 wstool update -t src -j4
 rosdep update
 
