@@ -9,7 +9,7 @@ sudo apt update && sudo apt upgrade -y
 
 # Instalação de pacotes
 # Instalação de pacotes
-sudo apt install net-tools git htop python3 python3-dev python3-pip python3-matplotlib python3-serial python3-scipy python3-opencv python-future libxml2-dev libxslt1.1 libxslt1-dev libz-dev python3-lxml -y
+sudo apt install net-tools git htop python3 python3-dev python3-pip python3-matplotlib python3-serial python3-scipy python3-opencv python3-future libxml2-dev libxslt1.1 libxslt1-dev libz-dev python3-lxml -y
 
 # Atualização do pip
 sudo pip3 install --upgrade pip
