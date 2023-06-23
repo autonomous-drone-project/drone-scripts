@@ -2,12 +2,12 @@
 #CATKIN
 
 # Muda para o diretório home do usuário
-cd ~/
-sudo apt install python3-catkin-pkg
+cd ~
+mkdir catkin_ws
 cd ~/catkin_ws
 
 # Instalar pacotes necessários
-sudo apt install python3-wstool python3-rosinstall-generator python3-catkin-lint python3-catkin-tools -y
+sudo apt install ros-noetic-catkin python3-catkin-tools python3-wstool python3-rosinstall-generator python3-catkin-lint -y
 pip3 install osrf-pycommon
 
 # Configurar ambiente de trabalho do Catkin
@@ -44,5 +44,6 @@ rosdep install --from-paths src --ignore-src --rosdistro noetic -y
 catkin build -j 3
 
 # Configurar o ambiente de trabalho do Catkin no arquivo .bashrc
+source devel/setup.bash
 echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
 source ~/.bashrc

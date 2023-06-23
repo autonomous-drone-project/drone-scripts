@@ -2,7 +2,7 @@
 #PACKAGES
 
 # Muda para o diretório home do usuário
-cd ~/
+cd ~
 
 # Atualização do sistema
 sudo apt update && sudo apt upgrade -y
@@ -16,8 +16,6 @@ sudo pip3 install --upgrade pip
 
 # Instalação de pacotes Python
 sudo pip3 install pyserial future pymavlink mavproxy --user
-
-sudo apt-get install python-catkin-tools
 
 # Atualização final do sistema
 sudo apt update && sudo apt upgrade -y
