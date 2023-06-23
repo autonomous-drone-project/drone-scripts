@@ -38,8 +38,5 @@ sudo apt-get install ros-noetic-mavros ros-noetic-mavros-extras -y
 # Download do script para instalar os dados do GeographicLib
 wget https://raw.githubusercontent.com/mavlink/mavros/master/mavros/scripts/install_geographiclib_datasets.sh
 
-# Concede permissões de execução ao script
-chmod a+x install_geographiclib_datasets.sh
-
 # Executa o script para instalar os dados do GeographicLib
-sudo ./install_geographiclib_datasets.sh
+sudo bash install_geographiclib_datasets.sh
