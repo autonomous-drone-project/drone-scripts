@@ -3,7 +3,7 @@
 
 cd ~/catkin_ws/src
 
-git clone https://github.com/autonomous-drone-project/Codes.git
+git clone https://github.com/autonomous-drone-project/drone_codes_cpp.git
 
 cd ~/catkin_ws
 
